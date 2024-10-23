@@ -3,7 +3,7 @@ body
   background-color: black;
 }
 
-.About
+h1
 {
  font-family: arial;
  color: #e65df5; 
@@ -101,69 +101,55 @@ img
 }
 
 
-/* Menu Button Decoration */
-.Menu
-{
-  padding: 18px;
-  cursor: pointer;
-  background-color: #cd56da;
-  color: white;
-  border: none; 
+/* Menu */
+a { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400; 
+  line-height: 18.5714px; 
 }
 
-/*Positioning menu button */
-.dropdown
-{
-  position: relative;
-  display: inline-block;
-  left: 15px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-/*Hiding dropdown links*/
-.DropdownContent 
-{
-  display: none;
-  position: absoloute;
-  background-color: white;
-  min-width: 160px;
-  z-index: 1;
-  line-height: 2;
+.topnav {
+  width: 100%; 
+  background-color: #000;
+  overflow: hidden; 
 }
-/*Decorating links*/
-.DropdownContent a 
-{
-  color: white; 
-  padding: 12px, 18px;
-  display: block;
+
+.topnav a {
+  float: left; 
+  text-align: left; 
+  width: 20%; 
+  padding: 12px 0; 
+  transition: all 0.3s ease; 
+  font-size: 24px; 
+}
+
+.topnav a.split{
+  float:left;
+  text-align: center;
+  background-color: #000;
+  color: #e65df5;
+}
+
+.topnav a:hover {
+  background-color: #2e2d2d; /* Add a hover color */
+}
+
+a:link{
+  color: #e65df5;
   text-decoration: none;
-  font-family: arial;
 }
 
-/* Decorating Dropdown Section */
-.DropdownContent a:hover
-{
-  color:white;
-  background-color:#e67ff1;
-  font-size: 18px;
-  text-decoration:underline;
-}
-
-/* Making menu change colour when hovered over*/
-.dropdownn Menu :hover 
-{
-  background-color: #940894;
-}
-
-/*Making links dropdown*/
-.dropdown:hover .DropdownContent
-{
-  display: block;
-  background-color: #9f979f;
-}
-
-.DropdownContent a:active
-{
-  color: purple;
+a:visited{
+  color: #e65df5;
+  text-decoration: none;
 }
 
 footer
@@ -171,3 +157,14 @@ footer
   color:purple;
   font-family: arial;
 }
+
+summary 
+{ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+  font-size: 21px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400; 
+  line-height: 30px; 
+  color: #e65df5;
+}
+  
