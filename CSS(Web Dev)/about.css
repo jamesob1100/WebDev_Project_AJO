@@ -80,7 +80,7 @@ summary
   font-size: 2rem;
 }
 
-/*Decorating h1 */
+/*decorating h1*/
 h1
 {
   color: #742a7d;
@@ -88,7 +88,7 @@ h1
   animation-duration: 8s;
 }
 
-/*Colour-changing animation*/
+/*colour changing animation*/
 @keyframes color-change 
 {
   0% { color: #742a7d;}
