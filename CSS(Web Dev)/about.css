@@ -19,7 +19,7 @@ ul {
 }
 
 .topnav {
-  width: 98.9vw; 
+  width: 100vw; 
   background-color: #000;
   overflow: hidden; 
   position: absolute;
@@ -189,36 +189,152 @@ summary
 }
 
 /* Style the footer */
-footer {
+footer 
+{
   font-size: 1.3rem;
   color: #e65df5;
   position: absolute;
   bottom: -18vh;
 }
 
+/*Max wdith 600px*/
 @media only screen and (max-width: 600px)
 {
-  .circle2
+
+  body
   {
-    transform: translate(-200px, 150px);
-    animation: none;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .grid-container
+  {
+    display: grid;
+    grid-template-areas: 
+      'header'
+      'left'
+      'right';
+      grid-template-columns:1fr;/*single column layout*/
+      gap: 5rem;
+      grid-template-rows: auto; 
+  }
+
+  .right
+  {
+    grid-area:right;
 
   }
 
-  .circle
+  .left
   {
-    transform: translate(10px, -300px);
-    animation: none;
+    grid-area:left;
   }
 
-  footer
+  .header
   {
-    position: absolute;
-    bottom: -45vh;
+    height: 15vh;
+    grid-area:header;
+  }
+
+footer
+{
+  bottom: -30vh;
+}
+
+.topnav
+{
+  width: 150vw;
+  margin: -1.8vw;
+}
+}
+
+/*Min width 600px*/
+@media only screen and (min-width: 600px)
+{
+  body
+  {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .grid-container
+  {
+    display: grid;
+    grid-template-areas: 
+      'header header'
+      'left'
+      'right';
+      grid-template-columns:1fr;/*single column layout*/
+      gap: 5rem;
+      grid-template-rows: auto; 
+  }
+
+  .right
+  {
+    grid-area:right;
+
+  }
+
+  .left
+  {
+    grid-area:left;
+  }
+
+  .header
+  {
+    height: 15vh;
+    grid-area:header;
   }
 
   .topnav
   {
-    width: 200vw;
+    margin: -0.4rem;
+    width: 100vw;
   }
 }
+
+/*Min width 768px*/
+@media only screen and (min-width: 768px)
+{
+
+  body
+  {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .grid-container
+  {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'left right';
+    grid-template-columns:1fr 1fr;
+    gap: 5rem;
+    grid-template-rows: auto;
+  }
+
+  .right
+  {
+    grid-area:right;
+
+  }
+
+  .left
+  {
+    grid-area:left;
+  }
+
+  .header
+  {
+    height: 15vh;
+    grid-area:header;
+  }
+
+  .topnav
+  {
+    margin: -0.4rem;
+    width: 100vw;
+  }
+}
+
