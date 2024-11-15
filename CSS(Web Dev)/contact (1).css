@@ -2,7 +2,14 @@ html {
   height: 100%;
   width:100%;
 }
-
+header {
+  grid-area: header;
+  height: 50vh;
+  width: 98.2vw;
+  text-align: center;
+  font-size: 2rem;
+  color: #742a7d;
+}
 body{
   margin-top: 270px;
   margin-bottom: 170px;
