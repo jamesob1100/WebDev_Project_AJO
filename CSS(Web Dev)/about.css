@@ -1,13 +1,108 @@
-body
-{
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  background-image: 
+    linear-gradient(rgba(250, 201, 184, 0.5), rgba(250, 220, 190, 0.5)), 
+    url(../Media/purple_village.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/*Style Menu*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav {
+  width: 98.9vw; 
+  background-color: #000;
+  overflow: hidden; 
+  position: absolute;
+  top: 0%;
+  margin-left: -0.55%;
+  z-index: 1;
+}
+
+.topnav a {
+  text-align: left; 
+  width:15%; 
+  padding: 12px 0; 
+  transition: all 0.3s ease; 
+  font-size: 1.2rem; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: block;
+  z-index: 1; 
+  position: relative;
   background-color: black;
 }
 
-h1
+.topnav a.split{
+  float:left;
+  text-align: center;
+  background-color: #000;
+  color: #e65df5;
+}
+
+.topnav a:hover {
+  background-color: #2e2d2d; /* Add a hover color */
+  text-decoration: underline;
+}
+
+a:link{
+  color: #e65df5;
+  text-decoration: none;
+}
+
+a:visited{
+  color:#e65df5;
+  text-decoration: none;
+}
+
+summary 
+{ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+  font-size: 21px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400; 
+  line-height: 30px; 
+  color: #e65df5;
+}
+/* Style the header/rectangle */
+.header {
+  grid-area: header;
+  height: 50vh;
+  width: 98.2vw;
+  text-align: center;
+  font-size: 2rem;
+  color: #742a7d;
+}
+
+.parent-container
 {
- font-family: arial;
- color: #e65df5; 
- text-align: center;
+  position:relative;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left left right right right' 
+} 
+
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  height: 40vh;
+  width: 50vw;
+  justify-items: end;
+  align-items: end;
 }
 
 /*Circle1 decoration*/
@@ -19,12 +114,13 @@ h1
   border-radius:50%;
   background-color:#c959c9; 
   transition: transform .5s; /* Animation */
+  z-index: 1;
 }
 
 /*heading*/
 .circle h2
 {
- font-size: 28px;
+ font-size: 1.75rem;
  transform: translate(48px, -70px);
  font-family: arial;
  color: #ff81ff;
@@ -46,7 +142,11 @@ h1
   font-size: 20px;
 }
 
-
+/* Style the right column */
+.right {
+  grid-area: right;
+  height: 40vh;
+}
 
 /*Second Circle*/
 .circle2
@@ -57,10 +157,9 @@ h1
   border-radius:50%;
   background-color:#c959c9; 
   transition: transform .5s; /* Animation */
-  margin-top: -418px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  z-index: 1;
+  position: relative;
   }
 
 /*Enlarging circle*/
@@ -89,82 +188,37 @@ h1
   font-size: 20px;
 }
 
+/* Style the footer */
+footer {
+  font-size: 1.3rem;
+  color: #e65df5;
+  position: absolute;
+  bottom: -18vh;
+}
 
-/*Positioning and shaping image*/
-img
+@media only screen and (max-width: 600px)
 {
-  width:350px;
-  height:300px;
-  position: relative;
-  top:-360px;
-  left:1090px;
-}
+  .circle2
+  {
+    transform: translate(-200px, 150px);
+    animation: none;
 
+  }
 
-/* Menu */
-a { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
-  font-size: 16px; 
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 400; 
-  line-height: 18.5714px; 
-}
+  .circle
+  {
+    transform: translate(10px, -300px);
+    animation: none;
+  }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+  footer
+  {
+    position: absolute;
+    bottom: -45vh;
+  }
 
-.topnav {
-  width: 100%; 
-  background-color: #000;
-  overflow: hidden; 
+  .topnav
+  {
+    width: 200vw;
+  }
 }
-
-.topnav a {
-  float: left; 
-  text-align: left; 
-  width: 20%; 
-  padding: 12px 0; 
-  transition: all 0.3s ease; 
-  font-size: 24px; 
-}
-
-.topnav a.split{
-  float:left;
-  text-align: center;
-  background-color: #000;
-  color: #e65df5;
-}
-
-.topnav a:hover {
-  background-color: #2e2d2d; /* Add a hover color */
-}
-
-a:link{
-  color: #e65df5;
-  text-decoration: none;
-}
-
-a:visited{
-  color: #e65df5;
-  text-decoration: none;
-}
-
-footer
-{
-  color:purple;
-  font-family: arial;
-}
-
-summary 
-{ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
-  font-size: 21px; 
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 400; 
-  line-height: 30px; 
-  color: #e65df5;
-}
-  
