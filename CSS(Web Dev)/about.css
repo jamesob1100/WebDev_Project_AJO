@@ -71,14 +71,32 @@ summary
   line-height: 30px; 
   color: #e65df5;
 }
-/* Style the header/rectangle */
+/* Style the header*/
 .header {
   grid-area: header;
   height: 50vh;
   width: 98.2vw;
   text-align: center;
   font-size: 2rem;
+}
+
+/*Decorating h1 */
+h1
+{
   color: #742a7d;
+  animation: color-change 1s infinite;
+  animation-duration: 8s;
+}
+
+/*Colour-changing animation*/
+@keyframes color-change 
+{
+  0% { color: #742a7d;}
+  25%{ color:#e65df5}
+  50%{ color: rgb(109, 109, 255); }
+  75%{ color: rgb(137, 0, 168);}
+  85% { color: rgb(230, 22, 216); }
+  100%{ color: #742a7d;}
 }
 
 .parent-container
