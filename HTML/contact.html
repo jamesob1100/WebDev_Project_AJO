@@ -3,40 +3,77 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../CSS/contact.css" rel="stylesheet" type="text/css" />
+        <link href="../CSS/contact (1).css" rel="stylesheet" type="text/css" />
          </head>
         <title>Anime Haven</title>
-    
-    <img src="../Media/contact page 1.png" alt="welcome to contact page image">
+   
     
     <body>
         <div class="topnav">
           <details> 
             <summary>Menu</summary>
-              <form action="/action_page.php" method="get">
                 <label><a href="../index.html">Home</a></label>
                 <label><a href="../HTML/shop.html">Shop</a></label>
                 <label><a href="../HTML/about.html">About</a></label>
         </div>
-        
-        <details> 
-            <summary>Online Inquiry</summary>
-            <form action="/action_page.php" method="get">
-            <label for="name">Name:</label>
-            <input type="text" id="Name" name="Name"><br><br>
-            <label for="email">Email:</label>
-            <input type="text" id="Email" name="Email"><br><br>
-            <label for="Phone">Phone:</label>
-            <input type="text" id="Phone" name="Phone"><br><br>
-            <label for="Inquiry">Inquiry:</label>
-            <textarea id="Inquiry" name="Inquiry" rows="15" cols="44">
-            </textarea>
-            <input type="submit" value="Submit">
+          
+          <img src="../Media/contact page 1.png" alt="welcome to contact page image">
+          
+          <section class="contact_form">
+            <h2> Contact Us</h2>
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact" name="contact">
+
+              <div class="javascript"> <input type="hidden" name="access_key" value="9664d795-29ec-4945-8373-3ebcf81468e3"></div>
+
+              <div class="input_box">
+                <label for="name" class="label">Full Name</label>
+                <div class ="input_field">
+                  <input type="text" placeholder="Full Name" name="name" id="name" class="item">
+                  <p class="error name-error"></p>
+                </div>
+                
+                <div class ="input_field">
+                    <label for="email" class="label">E-mail Address</label>
+                  <input type="text" placeholder="E-mail Address" name="email" id="email" class="item">
+                  <p class="error email-error"></p>
+                </div>
+                
+                <div class ="input_field">
+                  <label for="phone" class="label">Phone Number</label>
+                  <input type="text" placeholder="Phone Number" name="phone" id="phone" class="item">
+                  <p class="error phone-error"></p>
+                </div>
+                
+                  <label for="contact_method" class="label">Preferred Contact Method</label>
+                  <select name="contact_method" id="contact_method" class="item" form="contact" required>
+                    <option selected disabled>Preferred Contact Method</option>
+                    <option value="E-mail">E-mail</option>
+                    <option value="Phone">Phone</option>
+                    <option value="None">None</option>
+                </select>
+                <p class="error select-error"></p>
+                
+                <div class="textarea">
+                    <label for="message" class="label">Message</label>
+                  <textarea name="message" id="message" class=item cols="30" rows="10" placeholder="Message"></textarea>
+                  <p class="error message-error"></p>
+                </div>
+                
+                <button type="submit">Send</button>
+                
+              </div>
             </form>
-        </details>
-        <hr>
+          </section>
+
+          <br><br>
+
         <footer>
         <p> Developed by James and Áine and Owen</p>
         </footer>
+
+        <script src="../JavaScript/contact.js"></script>
+
+        
     </body>
  </html>
