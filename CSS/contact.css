@@ -1,105 +1,154 @@
-html {
-  height: 100%;
-  width:100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header {
-  grid-area: header;
-  height: 50vh;
-  width: 98.2vw;
-  text-align: center;
-  font-size: 2rem;
-  color: #742a7d;
+
+body {
+  background-color: #171716;
+  color: #e65df5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-body{
-  margin-top: 270px;
-  margin-bottom: 170px;
-  background-color:#171716;
+
+h2 {
+  font-size: 3rem;
+  color: #e65df5;
   text-align: center;
-  color: purple;
-}
-h1 {
-  font-size:30px;
-  font-family: arial;
-  color:#e65df5;
-  text-align: center;
-  background-color:purple;
+  background-color: purple;
+  border-color: purple;
+  border-style: solid;
   text-align: center;
   border-radius: 20px;
-  border-left:auto;
-  border-right:auto;
-}
-  img {
-    display: block;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:6px;
-  }
-
-  a { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
-    font-size: 16px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 400; 
-    line-height: 18.5714px; 
+  border-width: 1vw;
+  border-left: auto;
+  border-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .topnav {
-    width: 100%; 
-    overflow: hidden; 
-  }
-
-  .topnav a {
-    float: left; 
-    text-align: left; 
-    width: 20%; 
-    padding: 12px 0; 
-    transition: all 0.3s ease; 
-    font-size: 24px; 
-  }
-
-  .topnav a.split{
-    float:left;
-    text-align: center;
-    background-color: #000;
-    color:#e65df5;
-  }
-  
-  .topnav a:hover {
-    background-color: #2e2d2d; /* Add a hover color */
-  }
-
-a:link{
-    color:#e65df5;
-    text-decoration: none;
+form {
+  text-align: center;
 }
 
-a:visited{
-    color:#e65df5;
-    text-decoration: none;
+
+img {
+  display: block;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6px;
 }
 
-summary 
-{ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
-  font-size: 21px; 
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 400; 
-  line-height: 30px; 
+a {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+  display: block;
+}
+
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topnav a {
+  width: 20%;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+
+.topnav a.split {
+  background-color: #000;
   color: #e65df5;
 }
+
+.topnav a:hover {
+  background-color: #2e2d2d;
+  /* Add a hover color */
+}
+
+a:link {
+  color: #e65df5;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #e65df5;
+  text-decoration: none;
+}
+
+summary {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+  color: #e65df5;
+}
+
 footer {
-    font-size:15px;
-    font-family: arial;
-    color:purple;
-    text-align: center;
-    text-align: center;
-    
-  }
-  
+  font-size: 15px;
+  font-family: arial;
+  color: purple;
+  text-align: center;
+  text-align: center;
+}
+
+.item{
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: 0.1rem solid #e65df5;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  color: white;
+  background-color: black;
+  font-size: 1em;  
+}
+
+form .textarea .item
+{
+  resize: none;
+}
+
+form button{
+  padding: 1rem;
+  width: 48%;
+  cursor: pointer;
+  background-color: #e65df5;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 7px #e65df5;
+  margin: 1em;
+}
+
+form button:hover{
+  background-color: purple;
+  box-shadow: none;
+}
+
+.error{
+  font-size: 1em;
+  text-align: left;
+  color: #d93125;
+  margin: 0rem 0.7rem 1rem;
+  display: block;
+}
+
+.label{
+  float: left;
+  color: white;
+}
