@@ -9,6 +9,7 @@
    
     
     <body>
+      <!-- nav/menu bar -->
         <div class="topnav">
           <details> 
             <summary>Menu</summary>
@@ -19,18 +20,19 @@
           
           <img src="../Media/contact page 1.png" alt="welcome to contact page image">
           
+          <!-- contact form -->
           <section class="contact_form">
             <h2> Contact Us</h2>
-
+            <!--smtp (sends info inputted to form to an email)-->
             <form action="https://api.web3forms.com/submit" method="POST" id="contact" name="contact">
 
               <div class="javascript"> <input type="hidden" name="access_key" value="9664d795-29ec-4945-8373-3ebcf81468e3"></div>
-
+              
               <div class="input_box">
                 <label for="name" class="label">Full Name</label>
                 <div class ="input_field">
                   <input type="text" placeholder="Full Name" name="name" id="name" class="item">
-                  <p class="error name-error"></p>
+                  <p class="error name-error"></p><!--error message-->
                 </div>
                 
                 <div class ="input_field">
